@@ -1,0 +1,9 @@
+version: '3'
+services:
+  redis-server:
+    image: 'redis'
+  node-app:
+    restart: always
+    build: .  # look for the current dir Dockerfile and build
+    ports:
+      - "4001:8081"
